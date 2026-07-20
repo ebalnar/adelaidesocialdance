@@ -44,6 +44,7 @@ const STYLE_COLORS = {
   "Zouk": "#7048a8",
   "Kizomba": "#2e86ab",
   "West Coast Swing": "#158a7b",
+  "Swing": "#2f9e44",
   "Line Dance": "#a9790c",
   "Festival": "#4a4f5c"
 };
@@ -52,18 +53,19 @@ const DEFAULT_STYLE_COLOR = "#6b7280";
 const EVENTS = [
   // ---------------------------------------------------------------- WEEKLY
   {
-    id: "mamacita-social",
+    id: "westy-jams",
     recurrence: "weekly",
-    dayOfWeek: 2, // Tuesday
-    name: "Mamacita Social",
-    host: "La Bomba",
-    venue: "Mamacitas at Trype Hotel",
-    address: "Pulteny Street, Adelaide CBD",
-    time: "6:00 PM – 9:00 PM",
+    dayOfWeek: 1, // Monday
+    name: "Westy Jams",
+    host: "Quicksteps",
+    venue: "Quicksteps",
+    address: "255 Gouger St, Adelaide CBD",
+    time: "9:15 PM",
     cost: "Free",
-    styles: ["Salsa", "Bachata"],
-    description: "Weekly event with live music and food in a relaxed setting.",
-    link: "https://www.instagram.com/labomba_latindance/"
+    styles: ["Swing"],
+    description: "Weekly swing dancing social at Quicksteps.",
+    note: "Follows on from the social classes — check the Quicksteps timetable before heading down.",
+    link: "https://www.quicksteps.com.au/timetable/"
   },
   {
     id: "bachata-life-support",
@@ -193,6 +195,21 @@ const EVENTS = [
     description: "Regarded as one of the best socials in Adelaide — a monthly event with a 2/2/2 split of Salsa, Bachata and Kiz/Zouk.",
     note: "Held on the first Sunday of the month.",
     link: "https://www.plant4bowden.com.au/salsa"
+  },
+  {
+    id: "monthly-swing-social-mylor",
+    recurrence: "dated",
+    dates: ["2026-08-02", "2026-09-06", "2026-10-04", "2026-11-01", "2026-12-06"],
+    name: "Monthly Swing Social",
+    host: "HappensDance",
+    venue: "Mylor Hall",
+    address: "Corner of Strathalbyn Road and Cross Street, Mylor",
+    time: "3:00 PM – 5:00 PM",
+    cost: "$5 entry",
+    styles: ["West Coast Swing"],
+    description: "Monthly West Coast Swing practice session and social, hosted by HappensDance (the Hilltop HappensDancers) in the Adelaide Hills.",
+    note: "Held on the first Sunday of the month.",
+    link: "https://www.happensdance.com.au/hilltophappensdancers"
   },
   {
     id: "bachata-by-the-beach",

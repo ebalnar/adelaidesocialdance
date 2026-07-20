@@ -57,6 +57,15 @@ header.site p.tagline {
   padding: 0 20px 8px;
 }
 
+.apology-note {
+  font-size: 0.82rem;
+  color: #8a6d00;
+  background: #fff8e1;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 0 0 14px;
+}
+
 .scope-note {
   font-size: 0.82rem;
   color: var(--ink-soft);

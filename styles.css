@@ -100,12 +100,22 @@ header.site p.tagline {
 }
 
 /* --------------------------------------------------------------- filters */
+.filter-heading {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 24px 0 10px;
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
-  padding: 24px 0 8px;
+  padding: 0 0 8px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 28px;
 }

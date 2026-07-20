@@ -3,7 +3,7 @@
 
   const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const MONTH_NAMES = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const ALL_STYLES = ["Salsa", "Bachata", "Zouk", "Kizomba", "West Coast Swing", "Swing", "Line Dance", "Festival"];
+  const ALL_STYLES = ["Salsa", "Bachata", "Zouk", "Kizomba", "West Coast Swing", "Swing", "Line Dance", "Scottish Country Dance", "Rock 'n' Roll", "Ballroom", "Festival"];
 
   const activeFilters = new Set(); // empty set = show all
 
@@ -64,6 +64,12 @@
     }).join("");
   }
 
+  function buildMiniStyleTags(styles) {
+    return styles.map(function (s) {
+      return '<span class="style-tag-mini" style="--tag-color:' + styleColor(s) + '">' + s + "</span>";
+    }).join("");
+  }
+
   function buildEventCard(ev, dateISO) {
     const cardId = "ev-" + ev.id + "-" + dateISO;
     const linkHtml = ev.link ? '<a class="event-link" href="' + ev.link + '" target="_blank" rel="noopener">Visit event page →</a>' : "";
@@ -74,6 +80,7 @@
         '<button class="event-toggle" aria-expanded="false">' +
           '<div class="event-main">' +
             '<p class="event-name">' + ev.name + "</p>" +
+            '<div class="style-tags-mini">' + buildMiniStyleTags(ev.styles) + "</div>" +
             '<div class="event-meta"><span>' + ev.venue + "</span><span>·</span><span>" + ev.time + "</span><span>·</span><span>" + ev.cost + "</span></div>" +
           "</div>" +
           '<span class="event-chevron">▾</span>' +

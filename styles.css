@@ -217,7 +217,25 @@ header.site p.tagline {
 .event-name {
   font-weight: 700;
   font-size: 1rem;
-  margin: 0 0 3px;
+  margin: 0 0 5px;
+}
+
+.style-tags-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0 0 6px;
+}
+
+.style-tag-mini {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--tag-color, var(--accent));
 }
 
 .event-meta {

@@ -71,6 +71,19 @@ const EVENTS = [
     link: "https://www.quicksteps.com.au/timetable/"
   },
   {
+    id: "the-dancing-room",
+    recurrence: "weekly",
+    dayOfWeek: 2, // Tuesday
+    name: "Dancing Room",
+    host: "The Dancing Room",
+    venue: "Prospect Tennis Club",
+    address: "Wilcox Ave, Prospect",
+    time: "Until 7:30 PM",
+    cost: "Free",
+    styles: [],
+    description: "A weekly free event where people of all ages dance to different local DJs. It's about dancing like nobody is watching, connecting with yourself, having fun and moving your body. No drugs or alcohol. Lots of fun."
+  },
+  {
     id: "bachata-life-support",
     recurrence: "weekly",
     dayOfWeek: 3, // Wednesday
@@ -224,8 +237,8 @@ const EVENTS = [
     address: "Henley Beach, Adelaide",
     time: "4:00 PM – 9:00 PM",
     cost: "$15",
-    styles: ["Bachata"],
-    description: "Sunset ocean-view social on the last Sunday of every month, with a beginner-friendly floor and music by DJ Corazón. No partner required.",
+    styles: ["Salsa", "Bachata"],
+    description: "Sunset. Socials. Seaside vibes. Bachata by the Beach is more than a dance party — it's a community escape at the Henley Sailing Club, where the salt air meets the rhythm of Salsa and Bachata. Never danced before? Perfect — evenings are designed to be starter-friendly: skip the formal pressure, walk in solo or with friends, join the ice-breaker, and get shown the basics. What to expect: an easy-going first hour to meet the community (The Mingle), 15-minute starter sessions in Salsa and Bachata (The Mini-Workshops), and a high-energy floor with a 3:2 Bachata/Salsa mix and the best sunset views in Adelaide (The Social).",
     link: "https://www.danceamor.com.au/pages/adelaide-bachata-by-the-beach"
   },
   {

@@ -168,6 +168,20 @@ const EVENTS = [
     link: "https://www.quicksteps.com.au/line-dance-classes-at-quicksteps/"
   },
   {
+    id: "casablabla-fridays",
+    recurrence: "weekly",
+    dayOfWeek: 5, // Friday
+    name: "Casablabla Fridays",
+    host: "La Bomba & DJ Senorita",
+    venue: "Casablabla",
+    address: "12 Leigh St, Adelaide CBD",
+    time: "9:00 PM onward",
+    cost: "Free",
+    styles: ["Salsa", "Bachata", "Merengue", "Reggeton"],
+    description: "Weekly social featuring mainly Salsa and some Bachata, Merengue and Reggeton, with weekly 'follow me' sessions and top Cuban dancers.",
+    link: "https://www.instagram.com/labomba_latindance/"
+  },
+  {
     id: "boot-scootin-thursdays",
     recurrence: "weekly",
     dayOfWeek: 4, // Thursday

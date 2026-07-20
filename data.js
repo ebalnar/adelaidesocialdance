@@ -80,6 +80,20 @@ const EVENTS = [
     link: "https://www.instagram.com/bachatalifesupport/"
   },
   {
+    id: "midweek-mingle",
+    recurrence: "weekly",
+    dayOfWeek: 3, // Wednesday
+    name: "Midweek Mingle",
+    host: "Quicksteps",
+    venue: "Quicksteps (main ballroom)",
+    address: "255 Gouger St, Adelaide CBD",
+    time: "8:30 PM – 10:00 PM",
+    cost: "Free",
+    styles: ["Salsa", "Bachata", "West Coast Swing", "Line Dance"],
+    description: "Adelaide's regular weekly mixed dance style event — ballroom, Latin and swing dance with a sprinkling of line dance. 4-5 Quicksteps teachers on hand. Open to members and non-members.",
+    link: "https://www.quicksteps.com.au/midweek-mingle-at-quicksteps/"
+  },
+  {
     id: "taco-mia",
     recurrence: "weekly",
     dayOfWeek: 4, // Thursday
@@ -134,6 +148,20 @@ const EVENTS = [
     styles: ["Line Dance"],
     description: "Beginner-friendly follow-along line dance class, straight into Dance With Me Friday — a relaxed social dance night at the bar upstairs.",
     link: "https://www.quicksteps.com.au/line-dance-classes-at-quicksteps/"
+  },
+  {
+    id: "boot-scootin-thursdays",
+    recurrence: "weekly",
+    dayOfWeek: 4, // Thursday
+    name: "Boot Scootin' Thursdays",
+    host: "Saddle and Stomp",
+    venue: "Shotgun Willie's",
+    address: "22 Gilbert Place, Adelaide CBD",
+    time: "Every Thursday from 6:00 PM",
+    cost: "Free",
+    styles: ["Line Dance"],
+    description: "Free line dancing lessons at 6PM, every Thursday.",
+    link: "https://www.saddleandstomp.com.au/"
   },
   // --------------------------------------------------------------- MONTHLY
   {
@@ -212,6 +240,49 @@ const EVENTS = [
   },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "gssa-come-and-try-line-dancing",
+    recurrence: "dated",
+    dates: ["2026-08-25"],
+    name: "Come & Try Line Dancing with GSSA",
+    host: "Genuine Support Services Australia (GSSA) & Saddle and Stomp",
+    venue: "GSSA Activities Room",
+    address: "6 Seventh Street, Murray Bridge",
+    time: "4:00 PM – 6:00 PM",
+    cost: "$10 NDIS / $15 Public (refreshments $2)",
+    styles: ["Line Dance"],
+    description: "Come and try line dancing session for beginners — easy steps, friendly atmosphere, everyone welcome. No experience necessary.",
+    note: "Located in Murray Bridge, about an hour from Adelaide CBD. Minimum numbers required to go ahead — book by calling 8166 7577.",
+  },
+  {
+    id: "latin-sunday-sessions-aug9",
+    recurrence: "dated",
+    dates: ["2026-08-09"],
+    name: "Latin Sunday Sessions",
+    host: "DJ Hugo Salcedo",
+    venue: "The Suburban Brew",
+    address: "26–30 Provident Ave, Glynde",
+    time: "3:00 PM – 8:00 PM",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Latin music, social dancing and great vibes with DJ Hugo Salcedo.",
+    link: "https://www.instagram.com/thesuburbanbrew/"
+  },
+  {
+    id: "west-coast-mixer-aug23",
+    recurrence: "dated",
+    dates: ["2026-08-23"],
+    name: "West Coast Mixer",
+    host: "Yash, Adrian and Trisha",
+    venue: "Quicksteps",
+    address: "255 Gouger St, Adelaide CBD",
+    time: "5:30 PM – 7:30 PM",
+    cost: "$25 pre-purchase / $30 on the day",
+    styles: ["West Coast Swing"],
+    description: "West Coast Swing social mixer — hot tunes, cold drinks. All welcome, bring mates.",
+    note: "Tickets limited — buy in advance if possible.",
+    link: "https://www.instagram.com/quickstepsadelaide/"
+  },
   {
     id: "hugo-salcedo-band",
     recurrence: "dated",

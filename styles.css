@@ -67,6 +67,12 @@ header.site p.tagline {
   margin: 0;
 }
 
+.submit-hint {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+
 .submit-cta a {
   display: inline-block;
   background: var(--accent-soft);
@@ -316,6 +322,11 @@ footer.site {
 
 footer.site a { color: var(--accent); text-decoration: none; font-weight: 600; }
 footer.site a:hover { text-decoration: underline; }
+
+footer.site .disclaimer {
+  font-style: italic;
+  margin-bottom: 10px;
+}
 
 @media (max-width: 480px) {
   header.site h1 { font-size: 1.6rem; }

@@ -195,6 +195,21 @@ const EVENTS = [
     note: "Generally the first Friday of the month — confirm date/time via Evolution Dance Company's Facebook.",
     link: "https://www.facebook.com/EvolutionDanceAdelaide"
   },
+  {
+    id: "latino-grooves-monthly-social",
+    recurrence: "dated",
+    dates: ["2026-08-15", "2026-09-19", "2026-10-17", "2026-11-21", "2026-12-19"],
+    name: "Latino Grooves Monthly Social",
+    host: "Latino Grooves",
+    venue: "Latino Grooves Dance Studio",
+    address: "Basement, 366 King William Street, Adelaide CBD",
+    time: "8:30 PM onward",
+    cost: "$25 per person",
+    styles: ["Salsa", "Bachata"],
+    description: "Monthly Latin social hosted by Latino Grooves on the 3rd Saturday of every month.",
+    note: "Venue assumed to be the Latino Grooves studio — confirm via Instagram before heading down.",
+    link: "https://www.instagram.com/latinogroovesdancestudio/"
+  },
 
   // ------------------------------------------------------------- ONE-OFFS
   {

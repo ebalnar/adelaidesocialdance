@@ -130,18 +130,45 @@
     );
   }
 
+  // Build the list of weeks to display: today's week through the end of
+  // next calendar month (i.e. roughly the next two calendar months).
+  function buildWeeksList(today) {
+    const thisWeekStart = startOfWeek(today);
+    const coverageEnd = new Date(today.getFullYear(), today.getMonth() + 2, 0); // last day of next month
+
+    const weeks = [];
+    let cursor = thisWeekStart;
+    let i = 0;
+    while (cursor <= coverageEnd) {
+      let label;
+      if (i === 0) label = "This Week";
+      else if (i === 1) label = "Next Week";
+      else label = "Week of " + MONTH_NAMES[cursor.getMonth()] + " " + cursor.getDate();
+      weeks.push({ label: label, start: cursor });
+      cursor = addDays(cursor, 7);
+      i++;
+    }
+    return { weeks: weeks, coverageEnd: coverageEnd };
+  }
+
+  function renderTopNote(coverageEnd) {
+    const el = document.getElementById("scope-note");
+    if (!el) return;
+    el.textContent = "Showing every event we know about, from today through the end of " +
+      MONTH_NAMES[coverageEnd.getMonth()] + " " + coverageEnd.getFullYear() + ".";
+  }
+
   function render() {
     const today = new Date();
-    const thisWeekStart = startOfWeek(today);
-    const nextWeekStart = addDays(thisWeekStart, 7);
+    today.setHours(0, 0, 0, 0);
 
-    const html =
-      buildWeekSection("This Week", thisWeekStart) +
-      buildWeekSection("Next Week", nextWeekStart);
+    const built = buildWeeksList(today);
+    const html = built.weeks.map(function (w) { return buildWeekSection(w.label, w.start); }).join("");
 
     document.getElementById("calendar").innerHTML = html;
     applyFilters();
     attachCardHandlers();
+    renderTopNote(built.coverageEnd);
   }
 
   function attachCardHandlers() {

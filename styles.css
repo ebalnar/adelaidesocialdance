@@ -61,6 +61,14 @@ header.site p.attribution a {
   text-decoration: none;
 }
 
+header.site p.header-disclaimer {
+  margin: 12px auto 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-style: italic;
+  max-width: 480px;
+}
+
 header.site p.attribution a:hover { text-decoration: underline; }
 
 /* -------------------------------------------------------------- top note */

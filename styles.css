@@ -49,6 +49,20 @@ header.site p.tagline {
   margin: 0 auto;
 }
 
+header.site p.attribution {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+header.site p.attribution a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header.site p.attribution a:hover { text-decoration: underline; }
+
 /* -------------------------------------------------------------- top note */
 .top-note {
   text-align: center;

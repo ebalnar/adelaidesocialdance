@@ -18,7 +18,8 @@ const SCHOOLS = {
     { name: "Dance Pad", location: "St Peters & Marden", link: "https://thedancepad.com/" },
     { name: "Latin Room", location: "North Adelaide", link: "https://www.thelatinroom.com.au/" },
     { name: "KOLs (King Of Latin Soul Dance Academy)", location: "1 Portrush Road, Marden", link: "https://www.instagram.com/kolsdanceacademy/" },
-    { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" }
+    { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },
+    { name: "Adelaide University Salsa Mania", location: "Lady Symon, University of Adelaide, North Terrace", link: "https://linktr.ee/adelaideunisalsamania" }
   ],
   "Bachata": [
     { name: "Adelaide Bachata Academy", location: "98 Walkerville Terrace, Walkerville", link: "https://www.adelaidebachata.com.au/" },
@@ -43,6 +44,10 @@ const SCHOOLS = {
   ],
   "Swing Dancing": [
     { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },
-    { name: "HappensDance", location: "Burnside Ballroom, Tusmore", link: "https://www.happensdance.com.au/" }
+    { name: "HappensDance", location: "Burnside Ballroom, Tusmore", link: "https://www.happensdance.com.au/" },
+    { name: "Swing That Thing (Lindy Hop)", location: "North Adelaide & Norwood", link: "https://www.swingthatthing.com.au" }
+  ],
+  "Afro Dance": [
+    { name: "Feeling Good Afro Dance and Design", location: "3/23 Payneham Road, College Park", link: "https://www.feelinggoodafrodance.com.au/" }
   ]
 };

@@ -50,6 +50,7 @@ const STYLE_COLORS = {
   "Rock 'n' Roll": "#b91c1c",
   "Ballroom": "#9333ea",
   "Samba": "#059669",
+  "Cumbia": "#c2410c",
   "Festival": "#4a4f5c"
 };
 const DEFAULT_STYLE_COLOR = "#6b7280";
@@ -134,7 +135,7 @@ const EVENTS = [
     host: "HappensDance",
     venue: "Burnside Ballroom",
     address: "Tusmore, Adelaide",
-    time: "Classes from 7:30 PM · Social dancing 9:15 PM – 10:15 PM",
+    time: "Social dancing 9:15 PM – 10:15 PM",
     cost: "From $15",
     styles: ["West Coast Swing"],
     description: "Beginner-friendly West Coast Swing classes followed by an hour of social dancing with guest DJs every week. No partner or experience required.",
@@ -158,15 +159,28 @@ const EVENTS = [
     id: "dance-with-me-friday",
     recurrence: "weekly",
     dayOfWeek: 5, // Friday
-    name: "Line Dance Class + Dance With Me Friday",
+    name: "Dance with Me Social",
     host: "Quicksteps",
     venue: "Quicksteps",
     address: "255 Gouger St, Adelaide CBD",
-    time: "Line dance class 7:45 PM – 8:30 PM · Social from 8:30 PM",
+    time: "8:30 PM – 9:15 PM, various styles after",
     cost: "First class free",
     styles: ["Line Dance"],
-    description: "Beginner-friendly follow-along line dance class, straight into Dance With Me Friday — a relaxed social dance night at the bar upstairs.",
+    description: "A relaxed social dance night at the bar upstairs, with various styles played after 9:15pm.",
     link: "https://www.quicksteps.com.au/line-dance-classes-at-quicksteps/"
+  },
+  {
+    id: "line-dance-social-woolshed",
+    recurrence: "weekly",
+    dayOfWeek: 5, // Friday
+    name: "Line Dance Social",
+    host: "Saddle and Stomp",
+    venue: "The Woolshed",
+    address: "Hindley Street, Adelaide CBD",
+    time: "6:00 PM – 8:00 PM",
+    cost: "Check with host",
+    styles: ["Line Dance"],
+    description: "Weekly line dance social hosted by Saddle and Stomp at The Woolshed."
   },
   {
     id: "casablabla-fridays",
@@ -289,6 +303,21 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "leo-rey-tour-australia-2026-adelaide",
+    recurrence: "dated",
+    dates: ["2026-08-23"],
+    name: "Leo Rey — Tour Australia 2026 (Adelaide)",
+    host: "Prime Stage Event",
+    venue: "The Gov",
+    address: "59 Port Rd, Hindmarsh SA 5007",
+    time: "Doors open 6:00 PM – 11:00 PM",
+    cost: "See thegov.com.au for ticket prices",
+    styles: ["Cumbia"],
+    description: "Leo Rey live from Chile — Cumbia Tropical and one of the best danceable shows around, with guest band Red Tide plus DJ Pato & DJ Marz. Sponsored by the Chilean Community of South Australia and La Bomba.",
+    note: "For more info call Patricio Matus on 0477 698 558.",
+    link: "https://www.thegov.com.au"
+  },
+  {
     id: "pajuanchito-noches-de-salsa-aug15",
     recurrence: "dated",
     dates: ["2026-08-15"],
@@ -369,7 +398,7 @@ const EVENTS = [
     time: "6:30 PM",
     cost: "$99",
     styles: ["Salsa", "Bachata", "West Coast Swing", "Line Dance"],
-    description: "Dance the night away at the iconic Adelaide Town Hall. Ticket includes access to a generous grazing table, live performances by Quicksteps students and teachers, and great music with a proper dance-floor vibe.",
+    description: "Dance the night away at the iconic Adelaide Town Hall. Ticket includes access to a generous grazing table, live performances by Quicksteps students and teachers, and great music with a proper dance-floor vibe. Post event party at Quicksteps.",
     note: "Fun fact from the event page: Adelaide Town Hall has been part of the city since the 1800s and was once the largest municipal building in the Southern Hemisphere.",
     link: "https://www.quicksteps.com.au/events/winter-spectacular-at-the-adelaide-town-hall-2026/"
   },

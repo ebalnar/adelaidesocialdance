@@ -3,7 +3,7 @@
 
   const DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const MONTH_NAMES = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const ALL_STYLES = ["Salsa", "Bachata", "Zouk", "Kizomba", "West Coast Swing", "Swing", "Line Dance", "Scottish Country Dance", "Rock 'n' Roll", "Ballroom", "Festival"];
+  const ALL_STYLES = ["Salsa", "Bachata", "Zouk", "Kizomba", "West Coast Swing", "Swing", "Line Dance", "Scottish Country Dance", "Rock 'n' Roll", "Ballroom", "Samba", "Cumbia", "Festival"];
 
   const activeFilters = new Set(); // empty set = show all
 

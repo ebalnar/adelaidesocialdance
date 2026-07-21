@@ -56,5 +56,9 @@ const SCHOOLS = {
   "Afro Dance": [
     { name: "Feeling Good Afro Dance and Design", location: "3/23 Payneham Road, College Park", link: "https://www.feelinggoodafrodance.com.au/" },
     { name: "La Bomba", location: "44 Woodville Road, Woodville", link: "https://www.labomba.com.au" }
+  ],
+  "Line Dance": [
+    { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },
+    { name: "Saddle and Stomp", location: "Shotgun Willie's, 22 Gilbert Place, Adelaide CBD", link: "https://www.saddleandstomp.com.au/" }
   ]
 };

@@ -34,8 +34,12 @@ const SCHOOLS = {
     { name: "Latin Dance HQ", location: "Glandore", link: "https://www.latindancehq.com/" }
   ],
   "Samba": [
+    { name: "Escola de Samba Adelaide", location: "Torrensville", link: "https://www.escoladesambaadelaide.com/" },
+    { name: "Talita Dance Queen (TQ Dance & Movement Centre)", location: "107 Gilbert Street, Adelaide CBD", link: "https://www.talitadancequeen.com/" },
     { name: "La Bomba", location: "44 Woodville Road, Woodville", link: "https://www.labomba.com.au" },
-    { name: "Latino Grooves", location: "Basement, 366 King William Street, Adelaide CBD", link: "https://www.latinogrooves.com.au/brazilian-samba/" }
+    { name: "KOLs (King Of Latin Soul Dance Academy)", location: "1 Portrush Road, Marden", link: "https://www.instagram.com/kolsdanceacademy/" },
+    { name: "Latino Grooves", location: "Basement, 366 King William Street, Adelaide CBD", link: "https://www.latinogrooves.com.au/brazilian-samba/" },
+    { name: "Dance Pad", location: "St Peters & Marden", link: "https://thedancepad.com/" }
   ],
   "Swing Dancing": [
     { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },

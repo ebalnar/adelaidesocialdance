@@ -25,7 +25,8 @@ const SCHOOLS = {
       description: "Salsa classes focused on musicality, footwork and partnerwork across three levels.",
       link: "https://www.instagram.com/s.garcia.fer/",
       note: "*Coming soon* — reach out to Santiago to express interest."
-    }
+    },
+    { name: "Sumbaloz", location: "222 Findon Road", link: "https://www.instagram.com/sumbaloz/" }
   ],
   "Bachata": [
     { name: "Adelaide Bachata Academy", location: "98 Walkerville Terrace, Walkerville", link: "https://www.adelaidebachata.com.au/" },
@@ -60,5 +61,11 @@ const SCHOOLS = {
   "Line Dance": [
     { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },
     { name: "Saddle and Stomp", location: "Shotgun Willie's, 22 Gilbert Place, Adelaide CBD", link: "https://www.saddleandstomp.com.au/" }
+  ],
+  "Tango": [
+    { name: "Tango Culture", location: "Unley Community Centre, 18 Arthur St, Unley SA 5061", note: "Confirm link — not shown on their event listings." }
+  ],
+  "Zumba": [
+    { name: "Sumbaloz", location: "222 Findon Road", link: "https://www.instagram.com/sumbaloz/" }
   ]
 };

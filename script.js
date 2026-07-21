@@ -152,11 +152,11 @@
     );
   }
 
-  // Build the list of weeks to display: today's week through the end of
-  // next calendar month (i.e. roughly the next two calendar months).
+  // Build the list of weeks to display: today's week through 90 days
+  // from today (a rolling window, not tied to calendar months).
   function buildWeeksList(today) {
     const thisWeekStart = startOfWeek(today);
-    const coverageEnd = new Date(today.getFullYear(), today.getMonth() + 2, 0); // last day of next month
+    const coverageEnd = addDays(today, 90);
 
     const weeks = [];
     let cursor = thisWeekStart;
@@ -176,8 +176,9 @@
   function renderTopNote(coverageEnd) {
     const el = document.getElementById("scope-note");
     if (!el) return;
-    el.textContent = "Showing every event we know about, from today through the end of " +
-      MONTH_NAMES[coverageEnd.getMonth()] + " " + coverageEnd.getFullYear() + ".";
+    el.textContent = "Showing every event we know about, from today through " +
+      MONTH_NAMES[coverageEnd.getMonth()] + " " + coverageEnd.getDate() + ", " + coverageEnd.getFullYear() +
+      " (the next 90 days).";
   }
 
   function render() {

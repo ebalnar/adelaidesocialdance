@@ -51,6 +51,7 @@ const STYLE_COLORS = {
   "Ballroom": "#9333ea",
   "Samba": "#059669",
   "Cumbia": "#c2410c",
+  "Tango": "#831843",
   "Festival": "#4a4f5c"
 };
 const DEFAULT_STYLE_COLOR = "#6b7280";
@@ -212,19 +213,19 @@ const EVENTS = [
   },
   // --------------------------------------------------------------- MONTHLY
   {
-    id: "rumba-bueno",
+    id: "rumba-buena",
     recurrence: "dated",
     dates: ["2026-08-01", "2026-09-05", "2026-10-03", "2026-11-07", "2026-12-05"],
-    name: "Rumba Bueno",
-    host: "Mala Mia",
+    name: "Rumba Buena",
+    host: "DJ Rio and Mala Mia",
     venue: "Mala Mia",
     address: "268 Morphett St, Adelaide CBD",
     time: "9:00 PM – 2:00 AM",
     cost: "$15–$20",
     styles: ["Salsa", "Merengue", "Timba"],
-    description: "Monthly social focused on Timba-style music. A real party.",
+    description: "Monthly social focused on Timba-style music. A real party. ¡Animación, Percusión y mucha Diversión!",
     note: "Assumed 1st Saturday of the month — confirm exact date via Mala Mia.",
-    link: "https://www.instagram.com/malamia.adl/"
+    link: "https://www.instagram.com/rumbabuena_adl/"
   },
   {
     id: "salsa-sundays",
@@ -288,7 +289,7 @@ const EVENTS = [
   {
     id: "latino-grooves-monthly-social",
     recurrence: "dated",
-    dates: ["2026-08-15", "2026-09-19", "2026-10-17", "2026-11-21", "2026-12-19"],
+    dates: ["2026-09-19", "2026-10-17", "2026-11-21", "2026-12-19"],
     name: "Latino Grooves Monthly Social",
     host: "Latino Grooves",
     venue: "Latino Grooves Dance Studio",
@@ -302,6 +303,92 @@ const EVENTS = [
   },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "salsa-and-coffee-aug23",
+    recurrence: "dated",
+    dates: ["2026-08-23"],
+    name: "Salsa and Coffee",
+    host: "Rotunda Dance Club",
+    venue: "Providore 1885",
+    address: "Fort Largs",
+    time: "To be confirmed",
+    cost: "Free",
+    styles: ["Salsa"],
+    description: "A free event where a group of anywhere from 20–40 people meet, eat breakfast, have coffee, and salsa to start the day.",
+    note: "Placeholder — details to be confirmed.",
+    link: "https://www.instagram.com/rotundadanceclub/"
+  },
+  {
+    id: "shuffle-session-in-july",
+    recurrence: "dated",
+    dates: ["2026-07-26"],
+    name: "Shuffle Session in July",
+    host: "The Local Shuffle",
+    venue: "HYMN Bar",
+    address: "Level 1, 73 Grenfell St, Adelaide CBD",
+    time: "3:00 PM – 6:30 PM",
+    cost: "Check event page for pricing",
+    styles: ["Swing"],
+    description: "Live jazz and DJ'd event with plenty of opportunities to swing — the 2nd Shuffle Session from The Local Shuffle.",
+    link: "https://www.facebook.com/events/1317813916448341"
+  },
+  {
+    id: "viva-latinoamerica-fest-2026",
+    recurrence: "dated",
+    dates: ["2026-09-12"],
+    name: "Viva Latinoamérica Fest 2026",
+    host: "SOCIALBEAT & The Gov",
+    venue: "The Gov",
+    address: "59 Port Rd, Hindmarsh SA 5007",
+    time: "8:00 PM",
+    cost: "See ticket link for pricing",
+    styles: ["Salsa", "Bachata", "Cumbia", "Festival"],
+    description: "Adelaide's biggest celebration of Latin American music, dance and culture.",
+    link: "https://www.facebook.com/events/965720153006138/"
+  },
+  {
+    id: "fiesta-latina-aug15",
+    recurrence: "dated",
+    dates: ["2026-08-15"],
+    name: "Fiesta Latina",
+    host: "Latino Grooves Dance Studio",
+    venue: "Arkaba Hotel",
+    address: "150 Glen Osmond Road, Fullarton",
+    time: "8:30 PM",
+    cost: "See tix.yt/fiesta-latina for pricing",
+    styles: ["Salsa", "Bachata"],
+    description: "Latino Grooves is back at the Arkaba Hotel for a fantastic evening of Latin dancing, music and great atmosphere.",
+    link: "https://www.facebook.com/events/arkaba-hotel/fiesta-latina/2285770482168114/"
+  },
+  {
+    id: "lg-milonga-august-edition",
+    recurrence: "dated",
+    dates: ["2026-08-08"],
+    name: "LG Milonga — August Edition",
+    host: "Latino Grooves Dance Studio",
+    venue: "Latino Grooves Dance Studio",
+    address: "Basement, 366 King William St, Adelaide CBD",
+    time: "7:00 PM",
+    cost: "See ticket link for pricing",
+    styles: ["Tango"],
+    description: "One of three special Milonga nights in 2026 from Latino Grooves — an elegant evening of Tango, music and community.",
+    link: "https://www.facebook.com/events/1153463656639396"
+  },
+  {
+    id: "swing-extravaganza-aug15",
+    recurrence: "dated",
+    dates: ["2026-08-15"],
+    name: "Swing Extravaganza",
+    host: "Southern Jazz Club Inc",
+    venue: "The Highway",
+    address: "290 Anzac Highway, Plympton",
+    time: "Doors 6:00 PM · Music & dancing 7:30 PM – 10:15 PM",
+    cost: "$25 members / $35 non-members",
+    styles: ["Swing"],
+    description: "Live music and dancing with the Adelaide Society Swing Orchestra — fabulous music to sit and listen to, or get up and dance the night away.",
+    note: "Venue based on Southern Jazz Club's usual home — confirm via the ticket link.",
+    link: "https://www.facebook.com/events/4559281164394732/"
+  },
   {
     id: "leo-rey-tour-australia-2026-adelaide",
     recurrence: "dated",

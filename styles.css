@@ -202,6 +202,13 @@ header.site p.attribution a:hover { text-decoration: underline; }
   margin: 0 0 6px;
 }
 
+.school-desc {
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
 .school-link {
   font-size: 0.85rem;
   font-weight: 600;

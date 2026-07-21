@@ -260,6 +260,8 @@
       const schools = SCHOOLS[genre];
       const color = styleColor(genre === "Swing Dancing" ? "Swing" : genre);
       const rows = schools.map(function (s) {
+        const locationHtml = s.location ? '<p class="school-location">' + s.location + "</p>" : "";
+        const descHtml = s.description ? '<p class="school-desc">' + s.description + "</p>" : "";
         const noteHtml = s.note ? '<p class="school-note">' + s.note + "</p>" : "";
         const linkHtml = s.link
           ? '<a class="school-link" href="' + s.link + '" target="_blank" rel="noopener">Visit website →</a>'
@@ -267,7 +269,8 @@
         return (
           '<li class="school-row">' +
             '<p class="school-name">' + s.name + "</p>" +
-            '<p class="school-location">' + s.location + "</p>" +
+            locationHtml +
+            descHtml +
             linkHtml +
             noteHtml +
           "</li>"

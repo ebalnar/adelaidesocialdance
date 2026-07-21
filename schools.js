@@ -19,7 +19,13 @@ const SCHOOLS = {
     { name: "Latin Room", location: "North Adelaide", link: "https://www.thelatinroom.com.au/" },
     { name: "KOLs (King Of Latin Soul Dance Academy)", location: "1 Portrush Road, Marden", link: "https://www.instagram.com/kolsdanceacademy/" },
     { name: "Quicksteps", location: "255 Gouger St, Adelaide CBD", link: "https://www.quicksteps.com.au/" },
-    { name: "Adelaide University Salsa Mania", location: "Lady Symon, University of Adelaide, North Terrace", link: "https://linktr.ee/adelaideunisalsamania" }
+    { name: "Adelaide University Salsa Mania", location: "Lady Symon, University of Adelaide, North Terrace", link: "https://linktr.ee/adelaideunisalsamania" },
+    {
+      name: "Santiago Garcia",
+      description: "Salsa classes focused on musicality, footwork and partnerwork across three levels.",
+      link: "https://www.instagram.com/s.garcia.fer/",
+      note: "*Coming soon* — reach out to Santiago to express interest."
+    }
   ],
   "Bachata": [
     { name: "Adelaide Bachata Academy", location: "98 Walkerville Terrace, Walkerville", link: "https://www.adelaidebachata.com.au/" },
@@ -48,6 +54,7 @@ const SCHOOLS = {
     { name: "Swing That Thing (Lindy Hop)", location: "North Adelaide & Norwood", link: "https://www.swingthatthing.com.au" }
   ],
   "Afro Dance": [
-    { name: "Feeling Good Afro Dance and Design", location: "3/23 Payneham Road, College Park", link: "https://www.feelinggoodafrodance.com.au/" }
+    { name: "Feeling Good Afro Dance and Design", location: "3/23 Payneham Road, College Park", link: "https://www.feelinggoodafrodance.com.au/" },
+    { name: "La Bomba", location: "44 Woodville Road, Woodville", link: "https://www.labomba.com.au" }
   ]
 };

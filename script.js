@@ -6,6 +6,7 @@
   const ALL_STYLES = ["Salsa", "Bachata", "Zouk", "Kizomba", "West Coast Swing", "Swing", "Line Dance", "Scottish Country Dance", "Rock 'n' Roll", "Ballroom", "Samba", "Cumbia", "Tango", "Festival"];
 
   const activeFilters = new Set(); // empty set = show all
+  const activeLearnFilters = new Set(); // empty set = show all schools
 
   function toISODate(d) {
     return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
@@ -278,7 +279,7 @@
       }).join("");
 
       return (
-        '<div class="genre-block">' +
+        '<div class="genre-block" data-genre="' + genre + '">' +
           '<h3 class="genre-heading" style="--tag-color:' + color + '">' + genre + "</h3>" +
           '<ul class="school-list">' + rows + "</ul>" +
         "</div>"
@@ -286,6 +287,52 @@
     }).join("");
 
     container.innerHTML = html;
+  }
+
+  function applyLearnFilters() {
+    document.querySelectorAll(".genre-block").forEach(function (block) {
+      const genre = block.getAttribute("data-genre");
+      const show = activeLearnFilters.size === 0 || activeLearnFilters.has(genre);
+      block.style.display = show ? "" : "none";
+    });
+  }
+
+  function buildLearnFilterBar() {
+    const bar = document.getElementById("learn-filter-bar");
+    if (!bar || typeof SCHOOLS === "undefined") return;
+    const genres = Object.keys(SCHOOLS);
+
+    let html = '<button class="filter-btn active" data-genre="__all__">All Styles</button>';
+    html += genres.map(function (g) {
+      const color = styleColor(g === "Swing Dancing" ? "Swing" : g);
+      return '<button class="filter-btn" data-genre="' + g + '" style="--dot:' + color + '"><span class="dot"></span>' + g + "</button>";
+    }).join("");
+    bar.innerHTML = html;
+
+    bar.addEventListener("click", function (e) {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      const genre = btn.getAttribute("data-genre");
+
+      if (genre === "__all__") {
+        activeLearnFilters.clear();
+        bar.querySelectorAll(".filter-btn").forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+      } else {
+        bar.querySelector('[data-genre="__all__"]').classList.remove("active");
+        if (activeLearnFilters.has(genre)) {
+          activeLearnFilters.delete(genre);
+          btn.classList.remove("active");
+        } else {
+          activeLearnFilters.add(genre);
+          btn.classList.add("active");
+        }
+        if (activeLearnFilters.size === 0) {
+          bar.querySelector('[data-genre="__all__"]').classList.add("active");
+        }
+      }
+      applyLearnFilters();
+    });
   }
 
   // ------------------------------------------------------------ calendar grid
@@ -442,6 +489,7 @@
     buildFilterBar();
     render();
     buildLearnView();
+    buildLearnFilterBar();
     setupCalControls();
     renderCalGrid();
     setupTabs();

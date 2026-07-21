@@ -217,7 +217,7 @@ const EVENTS = [
     recurrence: "dated",
     dates: ["2026-08-01", "2026-09-05", "2026-10-03", "2026-11-07", "2026-12-05"],
     name: "Rumba Buena",
-    host: "DJ Rio and Mala Mia",
+    host: "DJ Rio and ChicaB",
     venue: "Mala Mia",
     address: "268 Morphett St, Adelaide CBD",
     time: "9:00 PM – 2:00 AM",

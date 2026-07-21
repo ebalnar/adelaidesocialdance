@@ -49,6 +49,7 @@ const STYLE_COLORS = {
   "Scottish Country Dance": "#1e3a8a",
   "Rock 'n' Roll": "#b91c1c",
   "Ballroom": "#9333ea",
+  "Samba": "#059669",
   "Festival": "#4a4f5c"
 };
 const DEFAULT_STYLE_COLOR = "#6b7280";
@@ -287,6 +288,20 @@ const EVENTS = [
   },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "pajuanchito-noches-de-salsa-aug15",
+    recurrence: "dated",
+    dates: ["2026-08-15"],
+    name: "Pa'Juanchito — Noches de Salsa",
+    host: "Pa'Juanchito & DJ Castillo Australia (Kukaramakara Melbourne)",
+    venue: "Higher Vision Bar",
+    address: "132 Hindley St, Adelaide CBD",
+    time: "Evening — check Instagram for start time",
+    cost: "Check Instagram for ticket details",
+    styles: ["Salsa"],
+    description: "The first Pa'Juanchito party in Adelaide — Salsa Caleña and Salsa Brava, a tribute to Colombian roots, with DJ Castillo Australia visiting from Kukaramakara Melbourne. Dress code: black.",
+    link: "https://www.instagram.com/p/Da7a8bsgToJ/"
+  },
   {
     id: "quicksteps-sunday-rock-getback",
     recurrence: "dated",

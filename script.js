@@ -31,6 +31,18 @@
     return DAY_NAMES[date.getDay()] + " " + date.getDate() + " " + MONTH_NAMES[date.getMonth()];
   }
 
+  // A day's events stay visible until 5AM the next morning (events often run
+  // past midnight), then drop off the list entirely. So "today" for display
+  // purposes is actually still "yesterday" until 5AM rolls around.
+  function getEffectiveCutoffDate(now) {
+    const cutoff = new Date(now);
+    if (now.getHours() < 5) {
+      cutoff.setDate(cutoff.getDate() - 1);
+    }
+    cutoff.setHours(0, 0, 0, 0);
+    return cutoff;
+  }
+
   function formatWeekRange(start, end) {
     const sameMonth = start.getMonth() === end.getMonth();
     const startStr = MONTH_NAMES[start.getMonth()] + " " + start.getDate();
@@ -99,7 +111,9 @@
     );
   }
 
-  function buildDayBlock(date, isToday) {
+  function buildDayBlock(date, isToday, cutoff) {
+    if (date < cutoff) return ""; // day has passed (past the 5AM rollover) — drop it
+
     const dayEvents = eventsForDate(date).sort(function (a, b) { return a.name.localeCompare(b.name); });
     const iso = toISODate(date);
     const visibleEvents = dayEvents; // filtering applied via CSS display toggling later
@@ -116,7 +130,7 @@
     );
   }
 
-  function buildWeekSection(label, weekStart) {
+  function buildWeekSection(label, weekStart, cutoff) {
     const weekEnd = addDays(weekStart, 6);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -125,7 +139,7 @@
     for (let i = 0; i < 7; i++) {
       const d = addDays(weekStart, i);
       const isToday = toISODate(d) === toISODate(today);
-      dayBlocks += buildDayBlock(d, isToday);
+      dayBlocks += buildDayBlock(d, isToday, cutoff);
     }
 
     return (
@@ -166,11 +180,13 @@
   }
 
   function render() {
+    const now = new Date();
+    const cutoff = getEffectiveCutoffDate(now);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
     const built = buildWeeksList(today);
-    const html = built.weeks.map(function (w) { return buildWeekSection(w.label, w.start); }).join("");
+    const html = built.weeks.map(function (w) { return buildWeekSection(w.label, w.start, cutoff); }).join("");
 
     document.getElementById("calendar").innerHTML = html;
     applyFilters();
@@ -235,8 +251,196 @@
     });
   }
 
+  // ------------------------------------------------------------ where-to-learn
+  function buildLearnView() {
+    const container = document.getElementById("learn-content");
+    if (!container || typeof SCHOOLS === "undefined") return;
+
+    const html = Object.keys(SCHOOLS).map(function (genre) {
+      const schools = SCHOOLS[genre];
+      const color = styleColor(genre === "Swing Dancing" ? "Swing" : genre);
+      const rows = schools.map(function (s) {
+        const noteHtml = s.note ? '<p class="school-note">' + s.note + "</p>" : "";
+        const linkHtml = s.link
+          ? '<a class="school-link" href="' + s.link + '" target="_blank" rel="noopener">Visit website →</a>'
+          : "";
+        return (
+          '<li class="school-row">' +
+            '<p class="school-name">' + s.name + "</p>" +
+            '<p class="school-location">' + s.location + "</p>" +
+            linkHtml +
+            noteHtml +
+          "</li>"
+        );
+      }).join("");
+
+      return (
+        '<div class="genre-block">' +
+          '<h3 class="genre-heading" style="--tag-color:' + color + '">' + genre + "</h3>" +
+          '<ul class="school-list">' + rows + "</ul>" +
+        "</div>"
+      );
+    }).join("");
+
+    container.innerHTML = html;
+  }
+
+  // ------------------------------------------------------------ calendar grid
+  const DOW_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let calMode = "month";
+  let calAnchor = new Date();
+  calAnchor.setHours(0, 0, 0, 0);
+
+  function addMonths(date, n) {
+    return new Date(date.getFullYear(), date.getMonth() + n, 1);
+  }
+
+  function buildDowHeaderRow() {
+    return DOW_SHORT.map(function (d) { return '<div class="cal-dow">' + d + "</div>"; }).join("");
+  }
+
+  function buildCalCell(date, inMonth, isWeekMode) {
+    const iso = toISODate(date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const isToday = iso === toISODate(today);
+    const events = eventsForDate(date).sort(function (a, b) { return a.name.localeCompare(b.name); });
+    const maxShow = isWeekMode ? 8 : 3;
+    const shown = events.slice(0, maxShow);
+    const extra = events.length - shown.length;
+
+    const pills = shown.map(function (ev) {
+      const color = ev.styles && ev.styles[0] ? styleColor(ev.styles[0]) : DEFAULT_STYLE_COLOR;
+      return '<div class="cal-event"><span class="dot" style="background:' + color + '"></span><span class="cal-event-label">' + ev.name + "</span></div>";
+    }).join("");
+    const moreHtml = extra > 0 ? '<div class="cal-more">+' + extra + " more</div>" : "";
+
+    let classes = "cal-cell";
+    if (!inMonth) classes += " cal-cell-out";
+    if (isToday) classes += " cal-cell-today";
+    if (events.length) classes += " cal-cell-has-events";
+
+    return (
+      '<div class="' + classes + '" data-date="' + iso + '">' +
+        '<div class="cal-daynum">' + date.getDate() + "</div>" +
+        '<div class="cal-events">' + pills + moreHtml + "</div>" +
+      "</div>"
+    );
+  }
+
+  function renderCalGrid() {
+    const label = document.getElementById("cal-label");
+    const grid = document.getElementById("cal-grid");
+    if (!grid || !label) return;
+
+    let html = buildDowHeaderRow();
+
+    if (calMode === "month") {
+      const first = new Date(calAnchor.getFullYear(), calAnchor.getMonth(), 1);
+      label.textContent = MONTH_NAMES[first.getMonth()] + " " + first.getFullYear();
+
+      const daysInMonth = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+      const lastOfMonth = new Date(first.getFullYear(), first.getMonth(), daysInMonth);
+      const startGrid = startOfWeek(first);
+      const endGrid = addDays(startOfWeek(lastOfMonth), 6);
+
+      let cursor = startGrid;
+      while (cursor <= endGrid) {
+        html += buildCalCell(cursor, cursor.getMonth() === first.getMonth(), false);
+        cursor = addDays(cursor, 1);
+      }
+      grid.className = "cal-grid cal-grid-month";
+    } else {
+      const weekStart = startOfWeek(calAnchor);
+      const weekEnd = addDays(weekStart, 6);
+      label.textContent = formatWeekRange(weekStart, weekEnd) + ", " + weekStart.getFullYear();
+
+      for (let i = 0; i < 7; i++) {
+        html += buildCalCell(addDays(weekStart, i), true, true);
+      }
+      grid.className = "cal-grid cal-grid-week";
+    }
+
+    grid.innerHTML = html;
+    attachCalCellHandlers();
+  }
+
+  function jumpToDayInList(iso) {
+    const bar = document.getElementById("tab-bar");
+    const whatsonBtn = bar && bar.querySelector('[data-view="calendar"]');
+    if (whatsonBtn) whatsonBtn.click();
+
+    setTimeout(function () {
+      const target = document.querySelector('.day-block[data-date="' + iso + '"]');
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.classList.add("day-block-flash");
+      setTimeout(function () { target.classList.remove("day-block-flash"); }, 1500);
+    }, 60);
+  }
+
+  function attachCalCellHandlers() {
+    // Overflow days from the previous/next month are shown dimmed just for grid
+    // alignment — they're not meaningfully clickable, so skip them.
+    document.querySelectorAll(".cal-cell:not(.cal-cell-out)").forEach(function (cell) {
+      cell.addEventListener("click", function () {
+        jumpToDayInList(cell.getAttribute("data-date"));
+      });
+    });
+  }
+
+  function setupCalControls() {
+    const prev = document.getElementById("cal-prev");
+    const next = document.getElementById("cal-next");
+    const todayBtn = document.getElementById("cal-today");
+    const modeBtns = document.querySelectorAll(".cal-mode-btn");
+    if (!prev) return;
+
+    prev.addEventListener("click", function () {
+      calAnchor = calMode === "month" ? addMonths(calAnchor, -1) : addDays(calAnchor, -7);
+      renderCalGrid();
+    });
+    next.addEventListener("click", function () {
+      calAnchor = calMode === "month" ? addMonths(calAnchor, 1) : addDays(calAnchor, 7);
+      renderCalGrid();
+    });
+    todayBtn.addEventListener("click", function () {
+      calAnchor = new Date();
+      calAnchor.setHours(0, 0, 0, 0);
+      renderCalGrid();
+    });
+    modeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        modeBtns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        calMode = btn.getAttribute("data-mode");
+        renderCalGrid();
+      });
+    });
+  }
+
+  function setupTabs() {
+    const bar = document.getElementById("tab-bar");
+    if (!bar) return;
+    bar.addEventListener("click", function (e) {
+      const btn = e.target.closest(".tab-btn");
+      if (!btn) return;
+      const view = btn.getAttribute("data-view");
+
+      bar.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      document.querySelectorAll(".view").forEach(function (v) { v.hidden = true; });
+      document.getElementById("view-" + view).hidden = false;
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     buildFilterBar();
     render();
+    buildLearnView();
+    setupCalControls();
+    renderCalGrid();
+    setupTabs();
   });
 })();

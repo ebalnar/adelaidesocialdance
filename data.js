@@ -221,7 +221,7 @@ const EVENTS = [
     venue: "Mala Mia",
     address: "268 Morphett St, Adelaide CBD",
     time: "9:00 PM – 2:00 AM",
-    cost: "$15–$20",
+    cost: "$10–$15",
     styles: ["Salsa", "Merengue", "Timba"],
     description: "Monthly social focused on Timba-style music. A real party. ¡Animación, Percusión y mucha Diversión!",
     note: "Assumed 1st Saturday of the month — confirm exact date via Mala Mia.",
@@ -304,9 +304,9 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
-    id: "salsa-and-coffee-aug23",
+    id: "salsa-and-coffee-aug9",
     recurrence: "dated",
-    dates: ["2026-08-23"],
+    dates: ["2026-08-09"],
     name: "Salsa and Coffee",
     host: "Rotunda Dance Club",
     venue: "Providore 1885",

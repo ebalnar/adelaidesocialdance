@@ -87,20 +87,6 @@ const EVENTS = [
     description: "A weekly free event where people of all ages dance to different local DJs. It's about dancing like nobody is watching, connecting with yourself, having fun and moving your body. No drugs or alcohol. Lots of fun."
   },
   {
-    id: "latin-night-mamacita",
-    recurrence: "weekly",
-    dayOfWeek: 2, // Tuesday
-    name: "Latin Night",
-    host: "Mamacita",
-    venue: "Mamacita",
-    address: "Level 1, 266 Pulteney St, Adelaide CBD",
-    time: "6:30 PM – 8:30 PM",
-    cost: "Check with venue",
-    styles: ["Salsa", "Bachata"],
-    description: "Weekly Latin Night at Mamacita — Salsa and Bachata.",
-    link: "https://www.instagram.com/mamacitaadelaide/"
-  },
-  {
     id: "bachata-life-support",
     recurrence: "weekly",
     dayOfWeek: 3, // Wednesday
@@ -380,8 +366,38 @@ const EVENTS = [
     styles: ["Samba"],
     description: "Samba social hosted by SA Samba.",
   },
+  {
+    id: "latin-night-la-bomba-fridays",
+    recurrence: "dated",
+    dates: ["2026-08-07", "2026-09-04", "2026-10-02", "2026-11-06", "2026-12-04"],
+    name: "Latin Night",
+    host: "La Bomba",
+    venue: "Mamacita",
+    address: "Level 1, 266 Pulteney St, Adelaide CBD",
+    time: "7:30 PM – 9:30 PM",
+    cost: "Check with host",
+    styles: ["Salsa"],
+    description: "Monthly Salsa social on the first Friday of the month, hosted by La Bomba at Mamacita.",
+    note: "Replaces the previous weekly Tuesday Latin Night at Mamacita — confirm venue via La Bomba before heading down.",
+    link: "https://www.labomba.com.au"
+  },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "rhythm-in-the-streets-aug22",
+    recurrence: "dated",
+    dates: ["2026-08-22"],
+    name: "Rhythm in the Streets",
+    host: "Rhythm in the Streets",
+    venue: "Studio 50",
+    address: "Mile End",
+    time: "Workshops 8:00 PM · Social dancing until late",
+    cost: "Early bird $15 (limited) / First release $20 / Door $25",
+    styles: ["Salsa", "Bachata"],
+    description: "100% Salsa & 100% Bachata social across two big dance floors, with an urban streetwear theme. Studio 1 (Salsa) — workshop and rueda with Cuban salsero Dayan at 8PM. Studio 2 (Bachata) — workshop with Manuela and Veronica at 8PM. Social dancing until late with DJ Diego and DJ Manu.",
+    note: "Parking available on site (enter through car park) plus street parking. No food allowed. High heels not permitted.",
+    link: "https://www.trybooking.com/DOFYA"
+  },
   {
     id: "live-band-melenge-latino-aug2",
     recurrence: "dated",

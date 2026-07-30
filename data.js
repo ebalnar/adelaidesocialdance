@@ -198,6 +198,21 @@ const EVENTS = [
     link: "https://www.instagram.com/labomba_latindance/"
   },
   {
+    id: "fiesta-fridays-mamacita",
+    recurrence: "weekly",
+    dayOfWeek: 5, // Friday
+    name: "Fiesta Fridays",
+    host: "La Bomba",
+    venue: "Mamacita",
+    address: "Upstairs, 266 Pulteney St, Adelaide CBD",
+    time: "6:00 PM – 9:00 PM",
+    cost: "Free entry — Latin dance classes included",
+    styles: ["Salsa", "Bachata"],
+    description: "Free Latin dance classes with La Bomba, followed by Latin DJs from 6PM–9PM every Friday at Mamacita. Tasty Mexican + international menu, cocktails and Adelaide's largest range of tequilas and mezcal.",
+    note: "Starts Friday 31 July — replaces the previous weekly Tuesday Latin Night at Mamacita.",
+    link: "https://www.labomba.com.au"
+  },
+  {
     id: "boot-scootin-thursdays",
     recurrence: "weekly",
     dayOfWeek: 4, // Thursday
@@ -366,21 +381,6 @@ const EVENTS = [
     styles: ["Samba"],
     description: "Samba social hosted by SA Samba.",
   },
-  {
-    id: "latin-night-la-bomba-fridays",
-    recurrence: "dated",
-    dates: ["2026-08-07", "2026-09-04", "2026-10-02", "2026-11-06", "2026-12-04"],
-    name: "Latin Night",
-    host: "La Bomba",
-    venue: "Mamacita",
-    address: "Level 1, 266 Pulteney St, Adelaide CBD",
-    time: "7:30 PM – 9:30 PM",
-    cost: "Check with host",
-    styles: ["Salsa"],
-    description: "Monthly Salsa social on the first Friday of the month, hosted by La Bomba at Mamacita.",
-    note: "Replaces the previous weekly Tuesday Latin Night at Mamacita — confirm venue via La Bomba before heading down.",
-    link: "https://www.labomba.com.au"
-  },
 
   // ------------------------------------------------------------- ONE-OFFS
   {
@@ -413,18 +413,17 @@ const EVENTS = [
     link: "https://events.humanitix.com/acaw-tunes-for-trees"
   },
   {
-    id: "salsa-and-coffee-aug8",
+    id: "salsa-and-coffee-aug16",
     recurrence: "dated",
-    dates: ["2026-08-08"],
+    dates: ["2026-08-16"],
     name: "Salsa and Coffee",
     host: "Rotunda Dance Club",
     venue: "Providore 1885",
     address: "Fort Largs",
-    time: "To be confirmed",
+    time: "10:00 AM – 12:00 PM",
     cost: "Free",
     styles: ["Salsa"],
     description: "A free event where a group of anywhere from 20–40 people meet, eat breakfast, have coffee, and salsa to start the day.",
-    note: "Placeholder — details to be confirmed.",
     link: "https://www.instagram.com/rotundadanceclub/"
   },
   {
@@ -669,6 +668,21 @@ const EVENTS = [
     styles: ["Salsa", "Bachata"],
     description: "Live trio playing Latin music including salsa, cumbia and bachata.",
     note: "One-off listing — check the venue for future dates.",
+    link: "https://www.instagram.com/hugosalcedomusic/"
+  },
+  {
+    id: "hugo-salcedo-band-fire-and-tide-aug22",
+    recurrence: "dated",
+    dates: ["2026-08-22"],
+    name: "Hugo Salcedo Band — Live Music",
+    host: "Hugo Salcedo",
+    venue: "Fire and Tide",
+    address: "Fort Largs Eatery, Fort Largs",
+    time: "4:00 PM – 9:00 PM",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Live music from the Hugo Salcedo Band at Fire and Tide, Fort Largs Eatery.",
+    note: "Message the venue's page to check set times.",
     link: "https://www.instagram.com/hugosalcedomusic/"
   }
 ];

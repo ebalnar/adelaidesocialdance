@@ -381,6 +381,20 @@ const EVENTS = [
     styles: ["Samba"],
     description: "Samba social hosted by SA Samba.",
   },
+  {
+    id: "latin-dance-nights-wakefield",
+    recurrence: "dated",
+    dates: ["2026-08-01", "2026-08-08", "2026-08-22"],
+    name: "Latin Dance Nights",
+    host: "Dance Amor",
+    venue: "The Wakefield Hotel",
+    time: "6:00 PM – 10:00 PM",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Free Latin Dance Nights hosted by Dance Amor at The Wakefield Hotel — Salsa and Bachata.",
+    note: "Address not confirmed — check with Dance Amor before heading down.",
+    link: "https://www.danceamor.com.au/"
+  },
 
   // ------------------------------------------------------------- ONE-OFFS
   {

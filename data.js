@@ -398,6 +398,63 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "salsa-expo-welcome-dinner-aug28",
+    recurrence: "dated",
+    dates: ["2026-08-28"],
+    name: "Salsa Expo — Welcome Dinner & Dance",
+    host: "La Bomba Latin Productions",
+    venue: "Mamacitas Restaurant, TRYP Hotel",
+    address: "266 Pulteney Street, Adelaide",
+    time: "6:00 PM – 9:00 PM",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Kick off Salsa Expo weekend with food, a fun Latin dance class, and the chance to meet and dance with the interstate guest artists before the big weekend begins.",
+    link: "https://www.facebook.com/100063821971780/posts/1570830135054371/"
+  },
+  {
+    id: "salsa-expo-welcome-fiesta-aug28",
+    recurrence: "dated",
+    dates: ["2026-08-28"],
+    name: "Salsa Expo — Welcome Fiesta",
+    host: "La Bomba Latin Productions",
+    venue: "CasaBlaBla",
+    address: "12 Leigh Street, Adelaide",
+    time: "9:00 PM – 2:00 AM",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Dance the night away with the créme de la créme of Adelaide's Latin dance scene and Salsa Expo's special guest artists at one of the city's hottest Latin party venues.",
+    link: "https://www.facebook.com/100063821971780/posts/1570830135054371/"
+  },
+  {
+    id: "salsa-expo-workshops-aug29",
+    recurrence: "dated",
+    dates: ["2026-08-29"],
+    name: "Salsa Expo — All Day Latin Dance Workshops",
+    host: "La Bomba Latin Productions",
+    venue: "TRYP Hotel Adelaide",
+    address: "266 Pulteney Street, Adelaide",
+    time: "10:30 AM – 6:30 PM",
+    cost: "$30 single workshop / $120 6-class pass / $145 full workshop pass / $160 Salsa Expo Super Pass (Super Pass includes the Saturday Night Fiesta ticket)",
+    styles: ["Salsa", "Bachata", "Festival"],
+    description: "55-minute workshops with guest artists El Moro (Cuba/Sydney), Romina (Argentina/Melbourne) and Dayan (Cuba/Adelaide), plus more TBA. Schedule: 10:30am Reggaeton & Urban Latin Body Movement (solo), 11:30am Salsa Shines Footwork & Styling (solo), 12:30pm Afro-Cuban Body Movement (solo), 1:30pm Bachata Solo Footwork, 2:30pm Bachata Turn Patterns (partnered), 3:30pm Fun Rueda de Casino Combos (partnered). Followed by Romina's Ladies Bachata Styling Bootcamp, 4:30–6:30pm ($50 pre-sold / $65 on the day) — includes an Instagram Reel filmed with your group.",
+    link: "https://www.facebook.com/100063821971780/posts/1570830135054371/"
+  },
+  {
+    id: "salsa-expo-saturday-night-fiesta-aug29",
+    recurrence: "dated",
+    dates: ["2026-08-29"],
+    name: "Salsa Expo — Saturday Night Fiesta",
+    host: "La Bomba Latin Productions",
+    venue: "TRYP Hotel Adelaide",
+    address: "266 Pulteney Street, Adelaide",
+    time: "7:30 PM till late",
+    cost: "$25 pre-sold / $30 on the night",
+    styles: ["Salsa", "Bachata", "Festival"],
+    description: "Performances by Adelaide's leading Latin dance schools, special guest artist shows, and social dancing until late with DJ Señorita. A huge night of Salsa, Bachata, Cuban and Latin beats.",
+    note: "La Bomba info line: 0401 811 722.",
+    link: "https://www.facebook.com/100063821971780/posts/1570830135054371/"
+  },
+  {
     id: "rhythm-in-the-streets-aug22",
     recurrence: "dated",
     dates: ["2026-08-22"],
@@ -698,5 +755,20 @@ const EVENTS = [
     description: "Live music from the Hugo Salcedo Band at Fire and Tide, Fort Largs Eatery.",
     note: "Message the venue's page to check set times.",
     link: "https://www.instagram.com/hugosalcedomusic/"
+  },
+  {
+    id: "tequila-carnival-pirathon-oct4",
+    recurrence: "dated",
+    dates: ["2026-10-04"],
+    name: "Tequila Carnival — Live Music",
+    host: "Tequila Carnival",
+    venue: "Pirathon Cellar Door",
+    address: "15 Vine Vale Road, Tanunda SA 5352",
+    time: "2:00 PM onward",
+    cost: "See event page for pricing",
+    styles: ["Salsa", "Bachata"],
+    description: "Live music from Tequila Carnival on the Sunday of Pirathon's 3-day October Long Weekend celebration — live music, wine, food and Barossa vibes at Pirathon Cellar Door.",
+    note: "In Tanunda, Barossa Valley — about an hour's drive from Adelaide CBD.",
+    link: "https://www.facebook.com/events/s/october-long-weekend-at-pirath/1724119988733532/"
   }
 ];

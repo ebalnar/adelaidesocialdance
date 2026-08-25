@@ -398,6 +398,35 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "sabor-a-cuba-lazaro-numa-sep18",
+    recurrence: "dated",
+    dates: ["2026-09-18"],
+    name: "Sabor a Cuba — Lazaro Numa",
+    host: "Adelaide Jazz Club",
+    venue: "Adelaide Jazz Club at Waves, InterContinental Adelaide",
+    address: "North Terrace, Adelaide SA 5000",
+    time: "8:00 PM – 10:30 PM",
+    cost: "Sold out — join the wait list via the ticket link",
+    styles: ["Salsa"],
+    description: "Cuban trumpeter and vocalist Lazaro Numa (The Cat Empire) leads Sabor a Cuba — a night of son, bolero, mambo, cha-cha-cha and rumba with an exceptional band of Cuban and Latin musicians.",
+    note: "Live music show rather than a social dance event, but a great night out for the Adelaide Latin community.",
+    link: "https://www.trybooking.com/events/landing/1632671"
+  },
+  {
+    id: "cadencia-mandinga-workshops-sep20",
+    recurrence: "dated",
+    dates: ["2026-09-20"],
+    name: "Cadencia & Mandinga Movement Co — Interstate Workshops",
+    host: "Carolina Prieto & Beto Armenta",
+    venue: "Casa Blanca",
+    address: "Henry St, Stepney",
+    time: "11:00 AM Son Cubano · 1:30 PM Casino",
+    cost: "See link in bio for pricing",
+    styles: ["Salsa"],
+    description: "Cadencia & Mandinga Movement Co (formerly Club.Sonero.ADL) present their first interstate workshops in Adelaide, led by Carolina Prieto and Beto Armenta. Two open-level workshops: 11am Son Cubano and 1:30pm Casino.",
+    note: "Link in bio for tickets/details — check the host's Instagram."
+  },
+  {
     id: "salsa-expo-welcome-dinner-aug28",
     recurrence: "dated",
     dates: ["2026-08-28"],

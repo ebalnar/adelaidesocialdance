@@ -87,6 +87,21 @@ const EVENTS = [
     description: "A weekly free event where people of all ages dance to different local DJs. It's about dancing like nobody is watching, connecting with yourself, having fun and moving your body. No drugs or alcohol. Lots of fun."
   },
   {
+    id: "pachanga-latin-fiesta-casablabla",
+    recurrence: "weekly",
+    dayOfWeek: 3, // Wednesday
+    name: "Pachanga · Latin Fiesta",
+    host: "salsabachatasocial.adl",
+    venue: "Casablabla",
+    address: "12 Leigh Street, Adelaide",
+    time: "9:00 PM till late",
+    cost: "Free entry",
+    styles: ["Salsa", "Bachata"],
+    description: "Weekly Wednesday night Latin fiesta at Casablabla — Salsa, Bachata and Latin hits, with DJ Hugo Salcedo.",
+    note: "Grand opening Wednesday 23 September.",
+    link: "https://www.instagram.com/p/DckO2gwoFy1/"
+  },
+  {
     id: "bachata-life-support",
     recurrence: "weekly",
     dayOfWeek: 3, // Wednesday
@@ -398,6 +413,21 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "casino-royale-sep26",
+    recurrence: "dated",
+    dates: ["2026-09-26"],
+    name: "Casino Royale — Salsa and Bachata Social",
+    host: "The Latin Room",
+    venue: "Dance Gallery",
+    address: "Torrensville",
+    time: "7:00 PM",
+    cost: "Limited early bird tickets — price increases at the door, see ticket link",
+    styles: ["Salsa", "Bachata"],
+    description: "A night of glamour, elegance and great dancing — 5 artists, 4 workshops, 2 rooms. 100% Salsa and 100% Bachata. Workshops: Salsa — 7pm Suelta with Santiago, 8pm Son partnerwork with Julio. Bachata — 7pm Rueda partnerwork with Manuela and Veronica, 8pm Styling with Joice.",
+    note: "Dress to impress — luxury, diamonds, sophisticated.",
+    link: "https://www.trybooking.com/DPLHH"
+  },
+  {
     id: "sabor-a-cuba-lazaro-numa-sep18",
     recurrence: "dated",
     dates: ["2026-09-18"],
@@ -515,7 +545,7 @@ const EVENTS = [
   {
     id: "salsa-and-coffee-aug16",
     recurrence: "dated",
-    dates: ["2026-08-16"],
+    dates: ["2026-08-16", "2026-09-28"],
     name: "Salsa and Coffee",
     host: "Rotunda Dance Club",
     venue: "Providore 1885",

@@ -545,7 +545,7 @@ const EVENTS = [
   {
     id: "salsa-and-coffee-aug16",
     recurrence: "dated",
-    dates: ["2026-08-16", "2026-09-28"],
+    dates: ["2026-08-16", "2026-09-27"],
     name: "Salsa and Coffee",
     host: "Rotunda Dance Club",
     venue: "Providore 1885",

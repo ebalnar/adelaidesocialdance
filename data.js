@@ -91,7 +91,7 @@ const EVENTS = [
     recurrence: "weekly",
     dayOfWeek: 3, // Wednesday
     name: "Pachanga · Latin Fiesta",
-    host: "salsabachatasocial.adl",
+    host: "Social Beat Entertainment",
     venue: "Casablabla",
     address: "12 Leigh Street, Adelaide",
     time: "9:00 PM till late",
@@ -413,6 +413,21 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "latino-carnival-the-gov-oct4",
+    recurrence: "dated",
+    dates: ["2026-10-04"],
+    name: "Latino Carnival",
+    host: "La Bomba",
+    venue: "The Governor Hindmarsh Hotel",
+    address: "59 Port Rd, Hindmarsh",
+    time: "8:00 PM – late",
+    cost: "See event page for pricing",
+    styles: ["Salsa", "Bachata", "Tango", "Cumbia", "Festival"],
+    description: "La Bomba takes over The Gov this October long weekend with Latino Carnival — Salsa, Bachata, Tango, Porro, Merengue, Timba and Reggaeton. Live band (Latin Soul), Latin floorshows, DJ Señorita and fiesta vibes.",
+    note: "Info line: 0401 811 722.",
+    link: "https://www.facebook.com/photo/?fbid=1639214278215956&set=a.480781310725931"
+  },
+  {
     id: "casino-royale-sep26",
     recurrence: "dated",
     dates: ["2026-09-26"],
@@ -545,7 +560,7 @@ const EVENTS = [
   {
     id: "salsa-and-coffee-aug16",
     recurrence: "dated",
-    dates: ["2026-08-16", "2026-09-27"],
+    dates: ["2026-08-16", "2026-09-27", "2026-10-18", "2026-11-15", "2026-12-20"],
     name: "Salsa and Coffee",
     host: "Rotunda Dance Club",
     venue: "Providore 1885",

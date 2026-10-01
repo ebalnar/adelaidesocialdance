@@ -413,6 +413,20 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "festa-do-samba-oct3",
+    recurrence: "dated",
+    dates: ["2026-10-03"],
+    name: "Festa do Samba",
+    host: "Australian Samba Retreat",
+    venue: "Burnside Ballroom",
+    address: "401 Greenhill Rd, Tusmore SA 5065",
+    time: "7:00 PM – 11:55 PM",
+    cost: "See ticket link for pricing",
+    styles: ["Samba"],
+    description: "A celebration of Brazilian samba, live pagode, explosive percussion and spectacular floor shows — an all-star international line-up of samba and Afro-Brazilian dance legends, with Adelaide's SaSamba bateria, Samba da Suel, DJ El Blat and DJ Julio.",
+    link: "https://events.humanitix.com/festadosamba"
+  },
+  {
     id: "latino-carnival-the-gov-oct4",
     recurrence: "dated",
     dates: ["2026-10-04"],

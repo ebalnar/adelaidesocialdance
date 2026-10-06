@@ -413,6 +413,21 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "one-zouk-congress-2026",
+    recurrence: "dated",
+    dates: ["2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01"],
+    name: "One Zouk Congress 2026",
+    host: "One Zouk Congress & Latin Dance HQ",
+    venue: "McLaren Vale Function Centre",
+    address: "McLaren Vale, South Australia",
+    time: "Four-day congress, 29 Oct – 1 Nov — see website for schedule",
+    cost: "Full Passes available — see website",
+    styles: ["Zouk", "Festival"],
+    description: "Four days of Brazilian Zouk in the heart of McLaren Vale wine country, with international and Australian artists. Longer workshops and integrated practice, teaching/DJ/J&J/choreography courses, BZDC Jack & Jill + Invitational, four nights of parties and social dancing, Sunday Halloween Marathon, onsite accommodation and an optional Monday wine tour.",
+    note: "Runs Thursday 29 Oct to Sunday 1 Nov. Located in McLaren Vale, about 45 minutes from Adelaide CBD.",
+    link: "https://www.onezoukcongress.com"
+  },
+  {
     id: "noche-de-los-muertos-oct24",
     recurrence: "dated",
     dates: ["2026-10-24"],

@@ -413,6 +413,20 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "noche-de-los-muertos-oct24",
+    recurrence: "dated",
+    dates: ["2026-10-24"],
+    name: "Noche De Los Muertos — Salsa and Bachata Social",
+    host: "The Latin Room",
+    venue: "Dance Gallery",
+    address: "Torrensville",
+    time: "8:00 PM",
+    cost: "Early bird $15 / First release & door $20",
+    styles: ["Salsa", "Bachata"],
+    description: "Spooky Salsa and Bachata social with a workshop for everyone. Sugar skulls, flowers, skeletons, colours — get creative! Prize for best dressed.",
+    link: "https://www.trybooking.com/DQLIB"
+  },
+  {
     id: "festa-do-samba-oct3",
     recurrence: "dated",
     dates: ["2026-10-03"],

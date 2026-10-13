@@ -413,6 +413,20 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "hugo-salcedo-trio-cue-bar-dec6",
+    recurrence: "dated",
+    dates: ["2026-12-06"],
+    name: "Hugo Salcedo Trio — Sunday Live Music",
+    host: "Hugo Salcedo",
+    venue: "Cue Bar",
+    address: "1/140–144 The Parade, Norwood SA 5067",
+    time: "3:30 PM – 6:30 PM",
+    cost: "Free",
+    styles: ["Salsa", "Bachata"],
+    description: "Live Latin music from the Hugo Salcedo Trio as part of Cue Bar's Sunday Live Music series.",
+    link: "https://www.instagram.com/hugosalcedomusic/"
+  },
+  {
     id: "cubata-welcome-dinner-oct9",
     recurrence: "dated",
     dates: ["2026-10-09"],

@@ -413,6 +413,28 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "beachside-bliss-season-26-27",
+    recurrence: "dated",
+    dates: [
+      "2026-11-22", "2026-12-13", "2026-12-27",
+      "2027-01-10", "2027-01-24", "2027-01-26",
+      "2027-02-14", "2027-02-21",
+      "2027-03-14", "2027-03-29",
+      "2027-04-11", "2027-04-18",
+      "2027-05-09", "2027-05-23"
+    ],
+    name: "Beachside Bliss",
+    host: "SAKAD (South Australian Kizomba & Afro Dance)",
+    venue: "Henley Square Auditorium/Rotunda",
+    address: "Henley Square, 257 Seaview Road, Henley Beach (opposite the car park, to the left of the square when facing the beach)",
+    time: "5:00 PM – 8:00 PM+",
+    cost: "Free",
+    styles: ["Kizomba"],
+    description: "SAKAD's free beachside dance season — Sunday Funday! All welcome. Bring a mate, a chair, and a plate to share. Season 26/27 launch party Sunday 22 Nov. Special editions: 13 Dec Christmas Edition (festive Christmas attire), 27 Dec New Year's Eve Party (all white everything), 26 Jan Australia Day (tropical paradise), 14 Feb Love Day (wear red), 29 Mar Easter Monday (bunny ears & pastels), 9 May Mother's Day Celebration (fabulous florals, TBC), 23 May Season Finale Party (SAKAD colours, TBC).",
+    note: "Outdoors and weather permitting — days, times and dates are subject to change. Follow SAKAD on Facebook for updates, or contact MTR on 0419 818 147.",
+    link: "https://www.facebook.com/events/28258325563847058/"
+  },
+  {
     id: "hugo-salcedo-gunson-street-party-oct30",
     recurrence: "dated",
     dates: ["2026-10-30"],

@@ -399,6 +399,35 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "lazaro-numa-sabor-a-cuba-latin-night-nov26",
+    recurrence: "dated",
+    dates: ["2026-11-26"],
+    name: "Latin Night — Lazaro Numa & Sabor a Cuba",
+    host: "Lazaro Numa & Sabor a Cuba",
+    venue: "Mimmo",
+    address: "286 Rundle St, Adelaide SA 5000",
+    time: "Salsa from 9:00 PM",
+    cost: "Free",
+    styles: ["Salsa"],
+    description: "Live music Latin night with Lazaro Numa & Sabor a Cuba (Cuba/ADL) — salsa from 9PM.",
+    note: "The poster lists the venue as Mimmo, 286 Rundle St — confirm the venue before heading down."
+  },
+  {
+    id: "la-bomba-nye-carnival-dec31",
+    recurrence: "dated",
+    dates: ["2026-12-31"],
+    name: "NYE Latino Carnival",
+    host: "La Bomba",
+    venue: "The Gov",
+    address: "59 Port Rd, Hindmarsh SA 5007",
+    time: "From 7:00 PM",
+    cost: "See ticket link / La Bomba for pricing",
+    styles: ["Salsa", "Bachata", "Festival"],
+    description: "New Year's Eve Latino Carnival at The Gov with La Bomba.",
+    note: "Details not yet confirmed online — check La Bomba (info line 0401 811 722) for tickets and times.",
+    link: "https://www.labomba.com.au"
+  },
+  {
     id: "osmani-workshop-nov3",
     recurrence: "dated",
     dates: ["2026-11-03"],

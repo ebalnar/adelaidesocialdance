@@ -231,7 +231,7 @@ const EVENTS = [
   {
     id: "rumba-buena",
     recurrence: "dated",
-    dates: ["2026-08-01", "2026-09-05", "2026-10-03", "2026-11-07", "2026-12-05"],
+    dates: ["2026-08-01", "2026-09-05", "2026-10-03", "2026-11-07", "2026-12-19"],
     name: "Rumba Buena",
     host: "DJ Rio and ChicaB",
     venue: "Mala Mia",
@@ -240,7 +240,7 @@ const EVENTS = [
     cost: "$10–$15",
     styles: ["Salsa", "Merengue", "Timba"],
     description: "Monthly social focused on Timba-style music. A real party. ¡Animación, Percusión y mucha Diversión!",
-    note: "Assumed 1st Saturday of the month — confirm exact date via Mala Mia.",
+    note: "Usually the 1st Saturday of the month (also known as Salsa Tumbao). December's edition is on Saturday 19 Dec instead.",
     link: "https://www.instagram.com/rumbabuena_adl/"
   },
   {
@@ -398,6 +398,21 @@ const EVENTS = [
   },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "latin-music-matinee-nov22",
+    recurrence: "dated",
+    dates: ["2026-11-22"],
+    name: "Latin Music Matinee — Latino Rhythms & Caribbean Vibes",
+    host: "La Bomba Productions (a City of Adelaide event)",
+    venue: "North Adelaide Community Centre",
+    address: "176 Tynte Street, North Adelaide",
+    time: "2:00 PM – 5:00 PM",
+    cost: "$5 via TryBooking (limited tickets)",
+    styles: ["Salsa", "Bachata"],
+    description: "A family-friendly afternoon of Latin rhythms and live music with Tequila Carnival, a four-piece band playing Salsa, Bachata, Merengue and Latin pop favourites. Plus an interactive warm-up dance class with La Bomba Latin Dance Studio, dance shows and presentations, and DJ Señorita.",
+    note: "Unlicensed event — soft drinks, water and juices available to purchase. Info line: 0401 811 722.",
+    link: "https://www.trybooking.com/DRFFF"
+  },
   {
     id: "lazaro-numa-sabor-a-cuba-latin-night-nov26",
     recurrence: "dated",

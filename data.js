@@ -207,10 +207,10 @@ const EVENTS = [
     venue: "Mamacita",
     address: "Upstairs, 266 Pulteney St, Adelaide CBD",
     time: "6:00 PM – 9:00 PM",
-    cost: "Free entry — Latin dance classes included",
+    cost: "Free entry — Latin dance sessions included",
     styles: ["Salsa", "Bachata"],
-    description: "Free Latin dance classes with La Bomba, followed by Latin DJs from 6PM–9PM every Friday at Mamacita. Tasty Mexican + international menu, cocktails and Adelaide's largest range of tequilas and mezcal.",
-    note: "Starts Friday 31 July — replaces the previous weekly Tuesday Latin Night at Mamacita.",
+    description: "Free Latin dance sessions with La Bomba and Latin DJs from 6PM–9PM every Friday at Mamacita. Tasty Mexican + international menu, cocktails and Adelaide's largest range of tequilas and mezcal.",
+    note: "Every Friday. Bookings: 8100 4000. Celebrate your birthday here with 10 friends and enjoy a complimentary birthday treat (conditions apply).",
     link: "https://www.labomba.com.au"
   },
   {
@@ -384,20 +384,36 @@ const EVENTS = [
   },
   {
     id: "latin-dance-nights-wakefield",
-    recurrence: "dated",
-    dates: ["2026-08-01", "2026-08-08", "2026-08-22"],
-    name: "Latin Dance Nights",
+    recurrence: "weekly",
+    dayOfWeek: 6, // Saturday
+    name: "Latin Nights at The Wakefield Hotel",
     host: "Dance Amor",
     venue: "The Wakefield Hotel",
+    address: "74-76 Wakefield St, Adelaide SA 5000",
     time: "6:00 PM – 10:00 PM",
-    cost: "Free entry",
+    cost: "Free entry earlier in the series — current Saturdays ticketed via Eventbrite, check the event page",
     styles: ["Salsa", "Bachata"],
-    description: "Free Latin Dance Nights hosted by Dance Amor at The Wakefield Hotel — Salsa and Bachata.",
-    note: "Address not confirmed — check with Dance Amor before heading down.",
-    link: "https://www.danceamor.com.au/"
+    description: "Saturday Latin nights hosted by Dance Amor at The Wakefield Hotel — a space to unwind, connect and feel the music with Salsa and Bachata.",
+    note: "Runs every Saturday. Check Dance Amor's event page for ticket details.",
+    link: "https://www.facebook.com/events/1382027096553070/1491201502302295/"
   },
 
   // ------------------------------------------------------------- ONE-OFFS
+  {
+    id: "tropicana-dec5-6",
+    recurrence: "dated",
+    dates: ["2026-12-05", "2026-12-06"],
+    name: "Tropicana",
+    host: "La Bomba",
+    venue: "La Bomba Dance Studio",
+    address: "44 Woodville Rd (corner Church Street), Woodville",
+    time: "Confirm details with La Bomba",
+    cost: "Confirm details with La Bomba",
+    styles: ["Salsa", "Festival"],
+    description: "La Bomba's Tropicana weekend, 5–6 December.",
+    note: "Confirm details with La Bomba for socials (info line 0401 811 722).",
+    link: "https://www.labomba.com.au"
+  },
   {
     id: "latin-music-matinee-nov22",
     recurrence: "dated",

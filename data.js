@@ -384,8 +384,8 @@ const EVENTS = [
   },
   {
     id: "latin-dance-nights-wakefield",
-    recurrence: "weekly",
-    dayOfWeek: 6, // Saturday
+    recurrence: "dated",
+    dates: ["2026-11-21"], // last Wakefield night for 2026
     name: "Latin Nights at The Wakefield Hotel",
     host: "Dance Amor",
     venue: "The Wakefield Hotel",
@@ -394,7 +394,7 @@ const EVENTS = [
     cost: "Free entry earlier in the series — current Saturdays ticketed via Eventbrite, check the event page",
     styles: ["Salsa", "Bachata"],
     description: "Saturday Latin nights hosted by Dance Amor at The Wakefield Hotel — a space to unwind, connect and feel the music with Salsa and Bachata.",
-    note: "Runs every Saturday. Check Dance Amor's event page for ticket details.",
+    note: "Last Wakefield night for 2026. Check Dance Amor's event page for ticket details.",
     link: "https://www.facebook.com/events/1382027096553070/1491201502302295/"
   },
 
@@ -436,13 +436,13 @@ const EVENTS = [
     name: "Latin Music Matinee — Latino Rhythms & Caribbean Vibes",
     host: "La Bomba Productions (a City of Adelaide event)",
     venue: "North Adelaide Community Centre",
-    address: "176 Tynte Street, North Adelaide",
+    address: "176 Tynte Street, North Adelaide SA 5006",
     time: "2:00 PM – 5:00 PM",
     cost: "$5 via TryBooking (limited tickets)",
     styles: ["Salsa", "Bachata"],
     description: "A family-friendly afternoon of Latin rhythms and live music with Tequila Carnival, a four-piece band playing Salsa, Bachata, Merengue and Latin pop favourites. Plus an interactive warm-up dance class with La Bomba Latin Dance Studio, dance shows and presentations, and DJ Señorita.",
     note: "Unlicensed event — soft drinks, water and juices available to purchase. Info line: 0401 811 722.",
-    link: "https://www.trybooking.com/DRFFF"
+    link: "https://www.trybooking.com/au/event/1673235"
   },
   {
     id: "lazaro-numa-sabor-a-cuba-latin-night-nov26",

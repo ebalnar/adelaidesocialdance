@@ -400,6 +400,21 @@ const EVENTS = [
 
   // ------------------------------------------------------------- ONE-OFFS
   {
+    id: "fiesta-del-sur-nov21",
+    recurrence: "dated",
+    dates: ["2026-11-21"],
+    name: "Fiesta del Sur — November Edition",
+    host: "Sabor Latino Dance Studio & Events",
+    venue: "Sabor Latino Dance Studio",
+    address: "164–170 Old South Rd, Old Reynella SA 5161",
+    time: "7:00 PM – 11:50 PM",
+    cost: "See event page for pricing",
+    styles: ["Salsa", "Bachata"],
+    description: "A night of Latin music, dancing, laughter and great company, presented by Sabor Latino Dance Studio & Events.",
+    note: "In Old Reynella (southern suburbs). Full details and pricing weren't visible on the event page — check the link.",
+    link: "https://www.facebook.com/events/2337423827030764"
+  },
+  {
     id: "tropicana-dec5-6",
     recurrence: "dated",
     dates: ["2026-12-05", "2026-12-06"],
